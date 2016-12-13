@@ -29,15 +29,18 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "callsite": "^1.0.0",
-    "glob": "^4.0.2",
+    "glob": "^5.0.15",
     "gulp": "^3.8.10",
     "gulp-util": "^2.2.16",
     "lodash": "^2.4.1",
-    "run-sequence": "^1.0.2"
+    "run-sequence": "^1.0.2",
+    "snyk": "^1.21.2"
   },
   "devDependencies": {
     "gulp": "^3.5.5",
@@ -57,5 +60,6 @@
     "gulp-chug",
     "multi",
     "gulpfriendly"
-  ]
+  ],
+  "snyk": true
 }
